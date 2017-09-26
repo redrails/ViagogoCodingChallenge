@@ -20,6 +20,7 @@ In addition to this the normal inputs like: 4,2 will be validated and distance m
 2. There are no lower limits for pricing of tickets.
 3. Maximum number of events in this world can be up to 10, however this is variable and randomly generated within the range 1 and 10.
 4. There is never less than one event in the world i.e. number of events are a non-zero value.
+5. Event IDs are zero-based.
 
 ## Working with a larger world
 If I was to expand this world and the number of events, I would face a lot of optimisation issues. This is because I am linearly searching through all the events, sorting them and then listing them.
