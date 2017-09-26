@@ -27,6 +27,7 @@ namespace ViagogoCodingChallenge
                     {
                         Console.WriteLine(e);
                     }
+                    continue;
                 }
 
                 string[] input = i.Split(",");
