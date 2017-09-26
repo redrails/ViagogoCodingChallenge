@@ -44,7 +44,7 @@ namespace ViagogoCodingChallenge
                         });
                     }
                     sorting = sorting.OrderBy(x => x.Distance).ToList();
-                    foreach(var e in sorting)
+                    foreach(var e in sorting.Take(5))
                     {
                         Console.WriteLine($"Event {e.Evt.Id} - ${e.Evt.TicketPrice}, Distance: {e.Distance}");
                     }

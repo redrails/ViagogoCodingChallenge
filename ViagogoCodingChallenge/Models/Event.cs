@@ -17,7 +17,7 @@ namespace ViagogoCodingChallenge.Models
 
         public override string ToString()
         {
-            return $"Id: {Id}, Position: ({PosX},{PosY})";
+            return $"Id: {String.Format("{0:000}", Id)}, Position: ({PosX},{PosY})";
         }
     }
 }
