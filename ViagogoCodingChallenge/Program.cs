@@ -67,6 +67,7 @@ namespace ViagogoCodingChallenge
                     Id = eventId,
                     PosX = r.Next(0, 10),
                     PosY = r.Next(0, 10),
+                    TicketQuantity = r.Next(1,1000),
                     TicketPrice = Math.Round(r.NextDouble() * r.Next(0, 100), 2)
                 });
                 eventId++;
