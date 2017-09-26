@@ -6,6 +6,10 @@ using ViagogoCodingChallenge.Models;
 
 namespace ViagogoCodingChallenge.Logic
 {
+    /// <summary>
+    /// Data generation.
+    /// Generates events, event info and also validation of checking that there is no more than one event in any one point in the world.
+    /// </summary>
     class Seed
     {
         public List<Event> Generate()
@@ -29,6 +33,11 @@ namespace ViagogoCodingChallenge.Logic
             return events;
         }
 
+        /// <summary>
+        /// Logic to check coordinate duplication.
+        /// </summary>
+        /// <param name="evt"> Event the coords are being generated for. </param>
+        /// <param name="events"> A list of all current events in the world. </param>
         private void GenerateCoord(Event evt, List<Event> events)
         {
             Random r = new Random();

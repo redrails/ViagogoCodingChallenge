@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ViagogoCodingChallenge.Models
 {
+    /// <summary>
+    /// Event Model - Denoting event objects.
+    /// </summary>
     class Event
     {
         public int Id { get; set; }
