@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using ViagogoCodingChallenge.Models;
 using ViagogoCodingChallenge.Implementations;
 using System.Linq;
+using ViagogoCodingChallenge.Logic;
 
 namespace ViagogoCodingChallenge
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            List<Event> events = Seed();
+            List<Event> events = new Seed().Generate();
             MeasureDistance m = new MeasureDistance();
             while (true)
             {
@@ -54,26 +56,5 @@ namespace ViagogoCodingChallenge
             }
 
         }
-        static List<Event> Seed()
-        {
-            Random r = new Random();
-            int numberOfEvents = r.Next(1, 10);
-            int eventId = 0;
-            List<Event> events = new List<Event>();
-            for (int i = 0; i < numberOfEvents; i++)
-            {
-                events.Add(new Event
-                {
-                    Id = eventId,
-                    PosX = r.Next(0, 10),
-                    PosY = r.Next(0, 10),
-                    TicketQuantity = r.Next(1,1000),
-                    TicketPrice = Math.Round(r.NextDouble() * r.Next(0, 100), 2)
-                });
-                eventId++;
-            }
-            return events;
-        }
-
     }
 }
