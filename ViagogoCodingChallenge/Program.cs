@@ -44,7 +44,7 @@ namespace ViagogoCodingChallenge
                     sorting = sorting.OrderBy(x => x.Distance).ToList();
                     foreach(var e in sorting)
                     {
-                        Console.WriteLine("Event " + e.Evt.Id + " - " + e.Evt.TicketPrice + ", Distance: " + e.Distance);
+                        Console.WriteLine($"Event {e.Evt.Id} - ${e.Evt.TicketPrice}, Distance: {e.Distance}");
                     }
                 }
                 else
@@ -65,9 +65,9 @@ namespace ViagogoCodingChallenge
                 events.Add(new Event
                 {
                     Id = eventId,
-                    PosX = r.Next(0,10),
+                    PosX = r.Next(0, 10),
                     PosY = r.Next(0, 10),
-                    TicketPrice = (Double)r.Next(0,100)/1.0
+                    TicketPrice = Math.Round(r.NextDouble() * r.Next(0, 100), 2)
                 });
                 eventId++;
             }
