@@ -28,6 +28,5 @@ Validation includes null checks, range checks and size checks.
 If I was to expand this world and the number of events, I would face a lot of optimisation issues. This is because I am linearly searching through all the events, sorting them and then listing them.
 With a bigger world, this would take a much longer time to process as there would be more events. 
 
-In addition to this, it is very important to note that a StackOverflow exception may occur on the `GenerateCoords()` method.
-The reason for this is, C# does not optimise tail-recursion to avoid a StackOverflow exception, in a case of a large world, it may take a long time to find distinct coordinates in which recursion may cause issues.
-Of course, to avoid this I would approach the problem differently.
+At first I used recursion to check distinct coordinates but that would have caused a stackoverflow exception, however to address this issue I got rid of recursion and instead used normal checking.
+For checking distinct coordinates in a bigger world where there are alot more events, there would be many issues with speed. Though the `.Any()` linq method provides good performance (see [this](https://stackoverflow.com/questions/305092/which-method-performs-better-any-vs-count-0)) it still may be a long process to validate a distinct generation of coordinates.

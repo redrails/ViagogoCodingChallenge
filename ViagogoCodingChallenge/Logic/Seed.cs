@@ -15,7 +15,7 @@ namespace ViagogoCodingChallenge.Logic
         public List<Event> Generate()
         {
             Random r = new Random();
-            int numberOfEvents = r.Next(1, 10);
+            int numberOfEvents = r.Next(1, 50);
             int eventId = 0;
             List<Event> events = new List<Event>();
             for (int i = 0; i < numberOfEvents; i++)
@@ -41,17 +41,28 @@ namespace ViagogoCodingChallenge.Logic
         private void GenerateCoord(Event evt, List<Event> events)
         {
             Random r = new Random();
-            int PosX = r.Next(0, 10);
-            int PosY = r.Next(0, 10);
-            if (events.Any(e => e.PosX == PosX && e.PosY == PosY))
+            int PosX, PosY;
+
+            while (true)
             {
-                GenerateCoord(evt, events);
+                PosX = r.Next(-10, 10);
+                PosY = r.Next(-10, 10);
+                if (CheckCoords(PosX, PosY, events))
+                {
+                    continue;
+                }
+                else
+                {
+                    evt.PosX = PosX;
+                    evt.PosY = PosY;
+                    break;
+                }
             }
-            else
-            {
-                evt.PosX = PosX;
-                evt.PosY = PosY;
-            }
+        }
+
+        private bool CheckCoords(int x, int y, List<Event> events)
+        {
+            return events.Any(e => e.PosX == x && e.PosY == y);
         }
 
     }
