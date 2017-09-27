@@ -20,7 +20,7 @@ Validation includes null checks, range checks and size checks.
 ## Assumptions
 1. There are a quantity of tickets available for each event.
 2. There are no lower limits for pricing of tickets.
-3. Maximum number of events in this world can be up to 10, however this is variable and randomly generated within the range 1 and 10.
+3. Maximum number of events in this world can be up to 50, however this is variable and randomly generated within the range 1 and 10.
 4. There is never less than one event in the world i.e. number of events are a non-zero value.
 5. Event IDs are zero-based.
 
