@@ -24,7 +24,7 @@ namespace ViagogoCodingChallenge.Logic
                 {
                     Id = eventId,
                     TicketQuantity = r.Next(1, 1000),
-                    TicketPrice = Math.Round(r.NextDouble() * r.Next(0, 100), 2)
+                    TicketPrice = Math.Round(r.NextDouble() * r.Next(1, 100), 2)
                 };
                 GenerateCoord(evt, events);
                 events.Add(evt);

@@ -9,7 +9,10 @@ namespace ViagogoCodingChallenge
 {
     class Program
     {
-
+        /// <summary>
+        /// Main program that takes input repeatedly until the application is closed.
+        /// Accepts commands like "show" to list all events generated and "clear" to clear console.
+        /// </summary>
         static void Main(string[] args)
         {
             List<Event> events = new Seed().Generate();
@@ -59,7 +62,7 @@ namespace ViagogoCodingChallenge
                     sorting = sorting.OrderBy(x => x.Distance).ToList();
                     foreach(var e in sorting.Take(5))
                     {
-                        Console.WriteLine($"Event {e.Evt.Id} - ${e.Evt.TicketPrice}, Distance: {e.Distance}");
+                        Console.WriteLine($"Event {String.Format("{0:000}", e.Evt.Id)} - ${e.Evt.TicketPrice}, Distance: {e.Distance}");
                     }
                 }
                 else
