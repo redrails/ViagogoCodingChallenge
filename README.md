@@ -29,5 +29,5 @@ If I was to expand this world and the number of events, I would face a lot of op
 With a bigger world, this would take a much longer time to process as there would be more events. 
 
 In addition to this, it is very important to note that a StackOverflow exception may occur on the `GenerateCoords()` method.
-The reason for this is, C# does not optimise tail-recursion to avoid a StackOverflow exception, in a case of a large world, it may take a long time to find distinct coordinated in which recursion may cause issues.
+The reason for this is, C# does not optimise tail-recursion to avoid a StackOverflow exception, in a case of a large world, it may take a long time to find distinct coordinates in which recursion may cause issues.
 Of course, to avoid this I would approach the problem differently.
