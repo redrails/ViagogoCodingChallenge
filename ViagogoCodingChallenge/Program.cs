@@ -29,14 +29,26 @@ namespace ViagogoCodingChallenge
                     }
                     continue;
                 }
+                if(i == "clear")
+                {
+                    Console.Clear();
+                    continue;
+                }
 
-                string[] input = i.Split(",");
+                string[] input = i.Split(',');
                 if (input.Length != 2)
                 {
                     Console.WriteLine("Please enter a valid input e.g. 4,2");
                 }
                 else if (int.TryParse(input[0], out int a) && int.TryParse(input[1], out int b))
                 {
+
+                    if(a < -10 || a > 10 || b < -10 || b > 10)
+                    {
+                        Console.WriteLine("Please enter a valid input in the range -10 or 10 on both axis");
+                        continue;
+                    }
+
                     foreach (var e in events)
                     {
                         sorting.Add(new SortHelper {

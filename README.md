@@ -11,9 +11,11 @@ Simply load the solution in Visual Studio and run it (F5).
 
 ## Inputs
 With the included guideline sent to me for this challenge, I also created an option for "show".
+Because I hate messy consoles there is also a "clear" command that will clear the console!!!
 By typing "show" when being asked for an input you'll be presented with a list of all events that have been generated and their ticket prices.
 
 In addition to this the normal inputs like: 4,2 will be validated and distance measuring would take place.
+Validation includes null checks, range checks and size checks.
 
 ## Assumptions
 1. There are a quantity of tickets available for each event.
