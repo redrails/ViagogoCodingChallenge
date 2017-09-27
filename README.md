@@ -4,7 +4,7 @@
 1. Windows or Mac (or anything that has a C# compiler)
 2. I would recommend using Visual Studio
 
-Note: No additional libraries or packages are required. This application is a console application solely relying on .NET Core 2.0.
+Note: No additional libraries or packages are required. This application is a console application solely relying on .NET Core 1.0.
 
 ## How to run
 Simply load the solution in Visual Studio and run it (F5).
